@@ -3,11 +3,11 @@ const credits = 23580;
 const pricePerDroid = 3000;
 let message;
 let countDroid = prompt('How much droid do u wont?');
-countDroid = Number(countDroid);
+// countDroid = Number(countDroid);
 const totalPrice = countDroid * pricePerDroid;
 const balance = credits - totalPrice;
 
-if (countDroid === 0) {
+if (countDroid === null) {
   message = 'Отменено пользователем!';
 } else if (totalPrice >= credits) {
   message = 'Недостаточно средств на счету!';
