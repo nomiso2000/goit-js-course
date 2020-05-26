@@ -1,20 +1,23 @@
 "use strict";
-const Storage = function (arr = []) {
-  this.arr = arr;
-  this.addItem = function (item) {
+
+class Storage {
+  constructor(arr = []) {
+    this.arr = arr;
+  }
+  addItem(item) {
     this.arr.push(item);
-  };
-  this.getItems = function () {
+  }
+  getItems() {
     return this.arr;
-  };
-  this.removeItem = function (item) {
+  }
+  removeItem(item) {
     let res = this.arr.includes(item);
     if (res) {
       let ind = this.arr.indexOf(item);
       let remov = this.arr.splice(1, 1);
     }
-  };
-};
+  }
+}
 
 const storage = new Storage([
   "Нанитоиды",

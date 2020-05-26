@@ -10,7 +10,7 @@ class Car {
             price ${price}`
     );
   }
-  constructor(maxSpeed, _price, speed = 0, isOn = false, distance = 0) {
+  constructor({ maxSpeed, _price, speed = 0, isOn = false, distance = 0 }) {
     this.maxSpeed = maxSpeed;
     this._price = _price;
     this.speed = speed;
@@ -49,7 +49,10 @@ class Car {
   }
 }
 
-const mustang = new Car(200, 2000);
+const mustang = new Car({
+  maxSpeed: 200,
+  _price: 2000,
+});
 mustang.turnOn();
 mustang.accelerate(50);
 mustang.drive(2);
