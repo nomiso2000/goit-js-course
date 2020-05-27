@@ -1,7 +1,7 @@
 "use strict";
 
 class Account {
-  constructor(email, login) {
+  constructor({ email, login }) {
     this.email = email;
     this.login = login;
   }
@@ -10,7 +10,13 @@ class Account {
     console.log(message);
   }
 }
-const mango1 = new Account("Mangozedog", "mango@dog.woof");
+const mango1 = new Account({
+  login: "Mangozedog",
+  email: "mango@dog.woof",
+});
 mango1.getInfo();
-const poly1 = new Account("Poly", "poly@mail.com");
+const poly1 = new Account({
+  login: "Poly",
+  email: "poly@mail.com",
+});
 poly1.getInfo();
