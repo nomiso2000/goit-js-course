@@ -1,15 +1,15 @@
 "use strict";
 
-class Account {
-  constructor({ email, login }) {
-    this.email = email;
-    this.login = login;
-  }
-  getInfo() {
-    const message = `Login: ${this.login}, Email: ${this.email}`;
-    console.log(message);
-  }
-}
+const Account = function ({ email, login }) {
+  this.email = email;
+  this.login = login;
+};
+Account.prototype.getInfo = function () {
+  const message = `Login: ${this.login}, Email: ${this.email}`;
+  console.log(message);
+};
+
+console.log(Account.prototype.getInfo);
 const mango1 = new Account({
   login: "Mangozedog",
   email: "mango@dog.woof",
